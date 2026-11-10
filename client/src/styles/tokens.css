@@ -1,0 +1,58 @@
+/* Sistema de diseño de Los Amigos del Kaffe. */
+:root {
+  /* Paleta de marca */
+  --espresso: #3b2923;
+  --roast: #76513d;
+  --caramel: #b98252;
+  --cream: #f5efe5;
+  --beige: #e7d9c7;
+  --sage: #89917a;
+  --white: #fffcf7;
+
+  /* Variantes para cumplir WCAG AA: el caramelo y la salvia de marca no alcanzan
+     4.5:1 sobre fondos claros, así que solo decoran. En texto se usan estas. */
+  --caramel-text: #85552d;
+  --sage-text: #565e49;
+  --ink: var(--espresso);
+  --ink-soft: #5c4438;
+  --line: #d9c8b3;
+  --control-line: #8d7666;
+  --danger: #96301f;
+  --danger-soft: #f7e4dc;
+  --success: #49553c;
+  --on-dark-soft: #e7d9c7;
+  --on-dark-line: rgb(255 252 247 / 16%);
+
+  /* Tipografía */
+  --font-display: 'Newsreader Variable', Georgia, 'Times New Roman', serif;
+  --font-body: 'Figtree Variable', 'Segoe UI', system-ui, sans-serif;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: clamp(1.625rem, 1.3rem + 1.4vw, 2.25rem);
+  --text-3xl: clamp(2.25rem, 1.6rem + 2.8vw, 3.5rem);
+  --text-hero: clamp(3rem, 1.6rem + 6.2vw, 6.25rem);
+  /* Cifras destacadas: resaltan, pero nunca superan a un título de apartado. */
+  --text-figure: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+
+  /* Espacio y forma */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --shadow-sm: 0 1px 2px rgb(59 41 35 / 8%);
+  --shadow: 0 2px 6px rgb(59 41 35 / 7%), 0 10px 24px rgb(59 41 35 / 7%);
+  --shadow-lg: 0 4px 12px rgb(59 41 35 / 10%), 0 22px 48px rgb(59 41 35 / 14%);
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --container: 1240px;
+  --gutter: clamp(1rem, 0.5rem + 2.4vw, 2.5rem);
+}

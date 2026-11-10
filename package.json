@@ -1,15 +1,33 @@
 {
-  "name": "kaffe-friends",
+  "name": "los-amigos-del-kaffe",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
+  "private": true,
+  "description": "Guía personal para descubrir, evaluar y recordar cafeterías y panaderías de Guadalajara. Un café a la vez.",
+  "author": "Jeanette Murillo",
   "license": "ISC",
-  "dependencies": {
-    "express": "^5.3.0"
+  "engines": {
+    "node": ">=18.17"
+  },
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "setup": "npm install && npm run build",
+    "build": "npm run build -w server && npm run build -w client",
+    "start": "npm run start -w server",
+    "dev": "concurrently -n api,web -c yellow,cyan \"npm run dev -w server\" \"npm run dev -w client\"",
+    "test": "npm run test -w server",
+    "test:e2e": "playwright test --config e2e/playwright.config.ts",
+    "typecheck": "npm run typecheck -w server && npm run typecheck -w client",
+    "google:setup": "npm run google:setup -w server --silent",
+    "demo:add": "npm run demo:add -w server",
+    "demo:remove": "npm run demo:remove -w server"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "@playwright/test": "1.55.1",
+    "concurrently": "^9.2.5",
+    "sharp": "^0.34.5"
   }
 }

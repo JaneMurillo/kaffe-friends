@@ -1,1 +1,17 @@
+# Dependencias y compilados
 node_modules/
+dist/
+
+# Datos personales: base de datos, fotografías y respaldos NUNCA se suben al repositorio
+data/
+
+# Entorno
+.env
+
+# Pruebas y entregables
+test-results/
+playwright-report/
+e2e/.tmp/
+release/
+
+*.log
